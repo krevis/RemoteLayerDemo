@@ -3,7 +3,7 @@
 //  RemoteLayerDemo
 //
 //  Created by Kurt Revis on 2/18/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Kurt Revis. All rights reserved.
 //
 
 #import "RLAppDelegate.h"

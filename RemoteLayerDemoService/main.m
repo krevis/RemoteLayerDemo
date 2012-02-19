@@ -3,7 +3,7 @@
 //  RemoteLayerDemoService
 //
 //  Created by Kurt Revis on 2/18/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Kurt Revis. All rights reserved.
 //
 
 #include <xpc/xpc.h>
@@ -42,7 +42,8 @@ static void RemoteLayerDemoService_peer_event_handler(xpc_connection_t peer, xpc
         switch (xpc_dictionary_get_uint64(event, "command"))
         {
             case 0:
-                // We can't tell if the value was really 0, or if there was no value for this key in the dictionary.
+                // We can't tell if the value was really 0, or if there was no value 
+                // for this key in the dictionary. So:
             default:
                 // Do nothing.
                 break;
@@ -117,15 +118,12 @@ static void RemoteLayerDemoService_event_handler(xpc_connection_t peer)
     kern_return_t err = bootstrap_look_up(bootstrap_port, "com.snoize.RemoteLayerDemo.layerServerPort", &layerServerPort);
     if (err != KERN_SUCCESS) {
         NSLog(@"bootstrap_look_up failed: %d", err);
-    } else {
-        NSLog(@"got port: %d", layerServerPort);
-        
-        // Create a CARemoteLayerClient
+    } else {        
+        // Create a CARemoteLayerClient, and stuff a layer into it.
         sRemoteLayerClient = [[CARemoteLayerClient alloc] initWithServerPort:layerServerPort];
         if (!sRemoteLayerClient) {
             NSLog(@"Couldn't create CARemoteLayerClient");
         } else {
-            // Stuff a layer in there
             CALayer* layer = sRemoteLayerClient.layer;
             if (!layer) {
                 layer = [CALayer layer];
