@@ -69,40 +69,94 @@
     
     CALayer* layer = [CALayer layer];
     layer.backgroundColor = CGColorCreateGenericRGB(0.f, 0.f, 1.f, 1.f);
-    layer.bounds = _view.bounds;
     
     _view.layer = layer;
     [_view setWantsLayer:YES];
 }
 
-- (IBAction)useService:(id)sender
+- (IBAction)getRemoteLayer:(id)sender
 {   
+    // Send a message to the service, asking for a remote layer's client ID.
+    // When it replies, make a CALayer with that client ID and add it to our view.
+    
     if (!self.serviceConnection)
         return;
     
     xpc_object_t message = xpc_dictionary_create(NULL, NULL, 0);
-    xpc_dictionary_set_string(message, "hi", "mom");
+    xpc_dictionary_set_uint64(message, "command", 1);
     
-    
-    xpc_connection_send_message_with_reply(self.serviceConnection, message, dispatch_get_main_queue(), ^(xpc_object_t reply) {
-#if 1
+    xpc_connection_send_message_with_reply(self.serviceConnection, message, dispatch_get_main_queue(), ^(xpc_object_t reply) {        
+#if 0
         char* s = xpc_copy_description(reply);
         NSLog(@"Got a reply: %s", s);
         free(s);
 #endif
         
-        uint32_t clientID = xpc_dictionary_get_uint64(reply, "clientID");
-        if (clientID != 0) {
-            CALayer* remoteLayer = [CALayer layerWithRemoteClientId:clientID];
-            if (remoteLayer) {
-                [_view.layer addSublayer:remoteLayer];
+        if (xpc_get_type(reply) == XPC_TYPE_DICTIONARY) {
+            uint32_t clientID = xpc_dictionary_get_uint64(reply, "clientID");
+            if (clientID != 0) {
+                // Make our CALayer to represent the remote CALayer
+                CALayer* remoteLayer = [CALayer layerWithRemoteClientId:clientID];
+                if (remoteLayer) {
+                    // And put it in our layer tree, making sure it doesn't animate
+                    [CATransaction begin];
+                    [CATransaction setDisableActions:YES];
+                    
+                    _view.layer.sublayers = [NSArray arrayWithObject:remoteLayer];
+                    
+                    // Center it in our bounds
+                    CGRect b = _view.layer.bounds;
+                    remoteLayer.position = CGPointMake(CGRectGetMidX(b), CGRectGetMidY(b));;
+
+                    [CATransaction commit];
+                } else {
+                    NSLog(@"Couldn't create remote CALayer");
+                }
             } else {
-                NSLog(@"Couldn't create remote CALayer");
+                NSLog(@"Reply dictionary either didn't have a client ID, or it was zero (unlikely)");
             }
+        } else {
+            NSLog(@"Got non-dictionary reply (probably an error)");
         }
     });
 
     xpc_release(message);
+}
+
+- (IBAction)changeColor:(id)sender
+{   
+    // Send a message to the service, asking it to change the remote layer's color.
+    // We do not expect a reply.
+    
+    if (!self.serviceConnection)
+        return;
+    
+    xpc_object_t message = xpc_dictionary_create(NULL, NULL, 0);
+    xpc_dictionary_set_uint64(message, "command", 2);
+        
+    xpc_connection_send_message(self.serviceConnection, message);
+    
+    xpc_release(message);
+}
+
+- (IBAction)removeRemoteLayer:(id)sender
+{
+    // Remove the remote layer.
+    [CATransaction begin];
+    [CATransaction setDisableActions:YES];    
+    _view.layer.sublayers = [NSArray array];
+    [CATransaction commit];
+    
+    // And tell the service that it should tear itself down.
+    if (self.serviceConnection)
+    {
+        xpc_object_t message = xpc_dictionary_create(NULL, NULL, 0);
+        xpc_dictionary_set_uint64(message, "command", 3);
+        
+        xpc_connection_send_message(self.serviceConnection, message);
+        
+        xpc_release(message);
+    }
 }
 
 @end

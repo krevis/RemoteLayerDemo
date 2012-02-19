@@ -13,6 +13,8 @@
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSView *view;
 
-- (IBAction)useService:(id)sender;
+- (IBAction)getRemoteLayer:(id)sender;
+- (IBAction)changeColor:(id)sender;
+- (IBAction)removeRemoteLayer:(id)sender;
 
 @end
