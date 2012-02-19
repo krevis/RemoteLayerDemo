@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		167B0A5514F0CF6200EDE639 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167B0A5414F0CF6200EDE639 /* Cocoa.framework */; };
+		167B0A5F14F0CF6200EDE639 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 167B0A5D14F0CF6200EDE639 /* InfoPlist.strings */; };
+		167B0A6114F0CF6200EDE639 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 167B0A6014F0CF6200EDE639 /* main.m */; };
+		167B0A6514F0CF6200EDE639 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 167B0A6314F0CF6200EDE639 /* Credits.rtf */; };
+		167B0A6814F0CF6200EDE639 /* RLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 167B0A6714F0CF6200EDE639 /* RLAppDelegate.m */; };
+		167B0A6B14F0CF6300EDE639 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167B0A6914F0CF6300EDE639 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		167B0A5014F0CF6200EDE639 /* RemoteLayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteLayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		167B0A5414F0CF6200EDE639 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		167B0A5714F0CF6200EDE639 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		167B0A5814F0CF6200EDE639 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		167B0A5914F0CF6200EDE639 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		167B0A5C14F0CF6200EDE639 /* RemoteLayerDemo-Info.plist */ = {isa = PBXFileReference; path = "RemoteLayerDemo-Info.plist"; sourceTree = "<group>"; };
+		167B0A5E14F0CF6200EDE639 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		167B0A6014F0CF6200EDE639 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		167B0A6214F0CF6200EDE639 /* RemoteLayerDemo-Prefix.pch */ = {isa = PBXFileReference; path = "RemoteLayerDemo-Prefix.pch"; sourceTree = "<group>"; };
+		167B0A6414F0CF6200EDE639 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		167B0A6614F0CF6200EDE639 /* RLAppDelegate.h */ = {isa = PBXFileReference; path = RLAppDelegate.h; sourceTree = "<group>"; };
+		167B0A6714F0CF6200EDE639 /* RLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RLAppDelegate.m; sourceTree = "<group>"; };
+		167B0A6A14F0CF6300EDE639 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		167B0A4D14F0CF6200EDE639 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167B0A5514F0CF6200EDE639 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		167B0A4514F0CF6200EDE639 = {
+			isa = PBXGroup;
+			children = (
+				167B0A5A14F0CF6200EDE639 /* RemoteLayerDemo */,
+				167B0A5314F0CF6200EDE639 /* Frameworks */,
+				167B0A5114F0CF6200EDE639 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		167B0A5114F0CF6200EDE639 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				167B0A5014F0CF6200EDE639 /* RemoteLayerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		167B0A5314F0CF6200EDE639 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				167B0A5414F0CF6200EDE639 /* Cocoa.framework */,
+				167B0A5614F0CF6200EDE639 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		167B0A5614F0CF6200EDE639 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				167B0A5714F0CF6200EDE639 /* AppKit.framework */,
+				167B0A5814F0CF6200EDE639 /* CoreData.framework */,
+				167B0A5914F0CF6200EDE639 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		167B0A5A14F0CF6200EDE639 /* RemoteLayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				167B0A6614F0CF6200EDE639 /* RLAppDelegate.h */,
+				167B0A6714F0CF6200EDE639 /* RLAppDelegate.m */,
+				167B0A6914F0CF6300EDE639 /* MainMenu.xib */,
+				167B0A5B14F0CF6200EDE639 /* Supporting Files */,
+			);
+			path = RemoteLayerDemo;
+			sourceTree = "<group>";
+		};
+		167B0A5B14F0CF6200EDE639 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				167B0A5C14F0CF6200EDE639 /* RemoteLayerDemo-Info.plist */,
+				167B0A5D14F0CF6200EDE639 /* InfoPlist.strings */,
+				167B0A6014F0CF6200EDE639 /* main.m */,
+				167B0A6214F0CF6200EDE639 /* RemoteLayerDemo-Prefix.pch */,
+				167B0A6314F0CF6200EDE639 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		167B0A4F14F0CF6200EDE639 /* RemoteLayerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 167B0A6E14F0CF6300EDE639 /* Build configuration list for PBXNativeTarget "RemoteLayerDemo" */;
+			buildPhases = (
+				167B0A4C14F0CF6200EDE639 /* Sources */,
+				167B0A4D14F0CF6200EDE639 /* Frameworks */,
+				167B0A4E14F0CF6200EDE639 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemoteLayerDemo;
+			productName = RemoteLayerDemo;
+			productReference = 167B0A5014F0CF6200EDE639 /* RemoteLayerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		167B0A4714F0CF6200EDE639 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RL;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 167B0A4A14F0CF6200EDE639 /* Build configuration list for PBXProject "RemoteLayerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 167B0A4514F0CF6200EDE639;
+			productRefGroup = 167B0A5114F0CF6200EDE639 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				167B0A4F14F0CF6200EDE639 /* RemoteLayerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		167B0A4E14F0CF6200EDE639 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167B0A5F14F0CF6200EDE639 /* InfoPlist.strings in Resources */,
+				167B0A6514F0CF6200EDE639 /* Credits.rtf in Resources */,
+				167B0A6B14F0CF6300EDE639 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		167B0A4C14F0CF6200EDE639 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167B0A6114F0CF6200EDE639 /* main.m in Sources */,
+				167B0A6814F0CF6200EDE639 /* RLAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		167B0A5D14F0CF6200EDE639 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				167B0A5E14F0CF6200EDE639 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		167B0A6314F0CF6200EDE639 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				167B0A6414F0CF6200EDE639 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		167B0A6914F0CF6300EDE639 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				167B0A6A14F0CF6300EDE639 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		167B0A6C14F0CF6300EDE639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		167B0A6D14F0CF6300EDE639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		167B0A6F14F0CF6300EDE639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RemoteLayerDemo/RemoteLayerDemo-Prefix.pch";
+				INFOPLIST_FILE = "RemoteLayerDemo/RemoteLayerDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		167B0A7014F0CF6300EDE639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RemoteLayerDemo/RemoteLayerDemo-Prefix.pch";
+				INFOPLIST_FILE = "RemoteLayerDemo/RemoteLayerDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		167B0A4A14F0CF6200EDE639 /* Build configuration list for PBXProject "RemoteLayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				167B0A6C14F0CF6300EDE639 /* Debug */,
+				167B0A6D14F0CF6300EDE639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		167B0A6E14F0CF6300EDE639 /* Build configuration list for PBXNativeTarget "RemoteLayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				167B0A6F14F0CF6300EDE639 /* Debug */,
+				167B0A7014F0CF6300EDE639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 167B0A4714F0CF6200EDE639 /* Project object */;
+}
