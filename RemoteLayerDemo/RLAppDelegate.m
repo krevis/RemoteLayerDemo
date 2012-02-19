@@ -32,10 +32,12 @@
 {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     _serviceConnection = xpc_connection_create("com.snoize.RemoteLayerDemoService", queue);
-    if (_serviceConnection)
-    {
+    if (_serviceConnection) {
         xpc_connection_set_event_handler(_serviceConnection, ^(xpc_object_t object) {
-            // ignored
+            if (object == XPC_ERROR_CONNECTION_INVALID) {
+                xpc_release(_serviceConnection);
+                _serviceConnection = NULL;
+            }
         });
         
         xpc_connection_resume(_serviceConnection);
@@ -44,6 +46,9 @@
 
 - (IBAction)useService:(id)sender
 {   
+    if (!self.serviceConnection)
+        return;
+    
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 
     xpc_object_t message = xpc_dictionary_create(NULL, NULL, 0);
@@ -56,6 +61,7 @@
         free(s);
 #endif        
     });
+
     xpc_release(message);
 }
 
