@@ -17,6 +17,9 @@
 		167B0A7D14F0CF8B00EDE639 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 167B0A7B14F0CF8B00EDE639 /* InfoPlist.strings */; };
 		167B0A8014F0CF8B00EDE639 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 167B0A7F14F0CF8B00EDE639 /* main.m */; };
 		167B0A8514F0D1A800EDE639 /* com.snoize.RemoteLayerDemoService.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 167B0A7514F0CF8B00EDE639 /* com.snoize.RemoteLayerDemoService.xpc */; };
+		167B0AA814F0F01800EDE639 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167B0AA714F0F01800EDE639 /* QuartzCore.framework */; };
+		167B0AAA14F0F5D500EDE639 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167B0AA714F0F01800EDE639 /* QuartzCore.framework */; };
+		167B0AAC14F0F5EA00EDE639 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167B0AAB14F0F5EA00EDE639 /* ApplicationServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +55,8 @@
 		167B0A7C14F0CF8B00EDE639 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		167B0A7E14F0CF8B00EDE639 /* RemoteLayerDemoService-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RemoteLayerDemoService-Prefix.pch"; sourceTree = "<group>"; };
 		167B0A7F14F0CF8B00EDE639 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		167B0AA714F0F01800EDE639 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		167B0AAB14F0F5EA00EDE639 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				167B0AA814F0F01800EDE639 /* QuartzCore.framework in Frameworks */,
 				167B0A5514F0CF6200EDE639 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +74,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				167B0A7714F0CF8B00EDE639 /* Foundation.framework in Frameworks */,
+				167B0AAC14F0F5EA00EDE639 /* ApplicationServices.framework in Frameworks */,
+				167B0AAA14F0F5D500EDE639 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +104,8 @@
 		167B0A5314F0CF6200EDE639 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				167B0AAB14F0F5EA00EDE639 /* ApplicationServices.framework */,
+				167B0AA714F0F01800EDE639 /* QuartzCore.framework */,
 				167B0A5414F0CF6200EDE639 /* Cocoa.framework */,
 				167B0A7614F0CF8B00EDE639 /* Foundation.framework */,
 				167B0A5614F0CF6200EDE639 /* Other Frameworks */,
@@ -407,6 +417,7 @@
 				167B0A7014F0CF6300EDE639 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		167B0A8114F0CF8B00EDE639 /* Build configuration list for PBXNativeTarget "RemoteLayerDemoService" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +426,7 @@
 				167B0A8314F0CF8B00EDE639 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

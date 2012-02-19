@@ -11,6 +11,7 @@
 @interface RLAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSView *view;
 
 - (IBAction)useService:(id)sender;
 
